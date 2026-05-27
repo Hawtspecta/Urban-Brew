@@ -19,16 +19,16 @@ const Contact = () => {
 
   return (
     <Layout>
-      <section className="pt-32 pb-24 bg-warm">
+      <section className="pt-32 pb-24 bg-warm/80">
         <div className="container mx-auto px-4 md:px-8">
           <AnimatedSection>
-            <div className="text-center mb-16">
+            <div className="text-center max-w-3xl mx-auto mb-16">
               <p className="font-body text-sm uppercase tracking-[0.2em] text-accent mb-3">Get in Touch</p>
               <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground">Contact Us</h1>
             </div>
           </AnimatedSection>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.4fr)_minmax(320px,420px)] gap-10 max-w-5xl mx-auto">
             {/* Form */}
             <AnimatedSection>
               <div className="bg-card rounded-2xl p-8 shadow-card">
@@ -75,52 +75,45 @@ const Contact = () => {
 
             {/* Info */}
             <AnimatedSection delay={0.2}>
-              <div className="space-y-8">
+              <div className="bg-card rounded-2xl p-8 shadow-card space-y-8">
                 <div>
                   <h2 className="font-display text-2xl font-bold text-foreground mb-6">Contact Info</h2>
-                  <div className="space-y-5">
-                    {[
-                      { icon: MapPin, label: "Address", value: "123 Brew Street, Downtown District" },
-                      { icon: Phone, label: "Phone", value: "+1 (555) 123-4567", href: "tel:+15551234567" },
-                      { icon: Mail, label: "Email", value: "hello@urbanbrew.cafe", href: "mailto:hello@urbanbrew.cafe" },
-                    ].map((item) => (
-                      <div key={item.label} className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-secondary rounded-xl flex items-center justify-center shrink-0">
-                          <item.icon className="w-5 h-5 text-primary" />
-                        </div>
-                        <div>
-                          <p className="font-body text-xs uppercase tracking-wider text-muted-foreground mb-0.5">{item.label}</p>
-                          {item.href ? (
-                            <a href={item.href} className="font-body text-sm text-foreground hover:text-primary transition-colors">{item.value}</a>
-                          ) : (
-                            <p className="font-body text-sm text-foreground">{item.value}</p>
-                          )}
-                        </div>
-                      </div>
-                    ))}
+                  <div className="space-y-6">
+                    <div>
+                      <p className="font-body text-xs uppercase tracking-wider text-muted-foreground mb-2">Address</p>
+                      <p className="font-body text-sm text-foreground">123 Brew Street, Downtown District</p>
+                    </div>
+                    <div>
+                      <p className="font-body text-xs uppercase tracking-wider text-muted-foreground mb-2">Phone</p>
+                      <a href="tel:+15551234567" className="font-body text-sm text-foreground hover:text-primary transition-colors">+1 (555) 123-4567</a>
+                    </div>
+                    <div>
+                      <p className="font-body text-xs uppercase tracking-wider text-muted-foreground mb-2">Email</p>
+                      <a href="mailto:hello@urbanbrew.cafe" className="font-body text-sm text-foreground hover:text-primary transition-colors">hello@urbanbrew.cafe</a>
+                    </div>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-3 flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-accent" /> Business Hours
-                  </h3>
-                  <div className="font-body text-sm text-muted-foreground space-y-1">
+                  <h3 className="font-display text-lg font-semibold text-foreground mb-3">Business Hours</h3>
+                  <div className="font-body text-sm text-foreground space-y-1">
                     <p>Monday – Friday: 7:00 AM – 9:00 PM</p>
                     <p>Saturday – Sunday: 8:00 AM – 10:00 PM</p>
                   </div>
                 </div>
 
-                <a
-                  href="https://wa.me/15551234567"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="outline" size="lg" className="rounded-full gap-2 mt-4">
-                    <MessageCircle className="w-5 h-5" />
-                    Message on WhatsApp
-                  </Button>
-                </a>
+                <div>
+                  <a
+                    href="https://wa.me/15551234567"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="outline" size="lg" className="rounded-full gap-2 w-full">
+                      <MessageCircle className="w-5 h-5" />
+                      Message on WhatsApp
+                    </Button>
+                  </a>
+                </div>
               </div>
             </AnimatedSection>
           </div>

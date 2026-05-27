@@ -54,7 +54,7 @@ const Index = () => {
                   </Button>
                 </Link>
                 <Link to="/contact">
-                  <Button size="lg" variant="outline" className="rounded-full text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                  <Button size="lg" variant="outline" className="rounded-full text-base px-8 border-primary-foreground/30 hover:bg-primary-foreground/10">
                     Book a Table
                   </Button>
                 </Link>
@@ -65,7 +65,7 @@ const Index = () => {
       </section>
 
       {/* Services */}
-      <section className="py-24 bg-warm">
+      <section className="py-24 bg-warm/80">
         <div className="container mx-auto px-4 md:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -76,12 +76,12 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((svc, i) => (
               <AnimatedSection key={svc.title} delay={i * 0.1}>
-                <div className="bg-card rounded-2xl p-8 shadow-card text-center hover:shadow-elevated transition-shadow">
+                <div className="h-full flex flex-col bg-card rounded-2xl p-8 shadow-card text-center hover:shadow-elevated transition-all duration-500 ease-out hover:-translate-y-1">
                   <div className="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center mx-auto mb-5">
                     <svc.icon className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-display text-xl font-semibold text-foreground mb-3">{svc.title}</h3>
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed">{svc.description}</p>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed flex-1">{svc.description}</p>
                 </div>
               </AnimatedSection>
             ))}
@@ -90,7 +90,7 @@ const Index = () => {
       </section>
 
       {/* Featured Items */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background/80">
         <div className="container mx-auto px-4 md:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -130,7 +130,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-warm">
+      <section className="py-24 bg-warm/80">
         <div className="container mx-auto px-4 md:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -141,13 +141,13 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
               <AnimatedSection key={t.name} delay={i * 0.1}>
-                <div className="bg-card rounded-2xl p-8 shadow-card">
+                <div className="h-full flex flex-col bg-card rounded-2xl p-8 shadow-card transition-all duration-500 ease-out hover:-translate-y-1 hover:shadow-elevated">
                   <div className="flex gap-1 mb-4">
                     {Array.from({ length: t.rating }).map((_, j) => (
                       <Star key={j} className="w-4 h-4 fill-caramel text-caramel" />
                     ))}
                   </div>
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed mb-5">"{t.text}"</p>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed mb-5 flex-1">"{t.text}"</p>
                   <p className="font-body text-sm font-semibold text-foreground">— {t.name}</p>
                 </div>
               </AnimatedSection>
@@ -157,7 +157,7 @@ const Index = () => {
       </section>
 
       {/* Map */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background/80">
         <div className="container mx-auto px-4 md:px-8">
           <AnimatedSection>
             <div className="text-center mb-12">
@@ -184,7 +184,7 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-primary/80">
         <div className="container mx-auto px-4 md:px-8 text-center">
           <AnimatedSection>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
@@ -200,7 +200,7 @@ const Index = () => {
                 </Button>
               </Link>
               <a href="tel:+15551234567">
-                <Button size="lg" variant="outline" className="rounded-full px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                <Button size="lg" variant="outline" className="rounded-full px-8 border-primary-foreground/30 hover:bg-primary-foreground/10">
                   Call Now
                 </Button>
               </a>

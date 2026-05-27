@@ -17,10 +17,10 @@ const About = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative pt-32 pb-24 bg-warm">
+      <section className="relative pt-32 pb-24 bg-warm/80">
         <div className="container mx-auto px-4 md:px-8">
           <AnimatedSection>
-            <div className="max-w-2xl">
+            <div className="max-w-2xl mx-auto text-center">
               <p className="font-body text-sm uppercase tracking-[0.2em] text-accent mb-3">Our Story</p>
               <h1 className="font-display text-5xl md:text-6xl font-bold text-foreground leading-[1.1] mb-6">
                 Brewed with Heart
@@ -34,7 +34,7 @@ const About = () => {
       </section>
 
       {/* Story */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background/80">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection>
@@ -64,7 +64,7 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-24 bg-warm">
+      <section className="py-24 bg-warm/80">
         <div className="container mx-auto px-4 md:px-8">
           <AnimatedSection>
             <div className="text-center mb-16">
@@ -89,7 +89,7 @@ const About = () => {
       </section>
 
       {/* Owner */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-background/80">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <AnimatedSection delay={0.1}>
@@ -116,7 +116,7 @@ const About = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary">
+      <section className="py-20 bg-primary/80">
         <div className="container mx-auto px-4 md:px-8 text-center">
           <AnimatedSection>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Come Say Hello</h2>

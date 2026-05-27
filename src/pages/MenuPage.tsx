@@ -34,7 +34,7 @@ const MenuPage = () => {
 
   return (
     <Layout>
-      <section className="pt-32 pb-24 bg-warm">
+      <section className="pt-32 pb-24 bg-warm/80">
         <div className="container mx-auto px-4 md:px-8">
           <AnimatedSection>
             <div className="text-center mb-12">

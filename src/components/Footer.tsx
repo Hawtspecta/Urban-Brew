@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <footer className="bg-espresso text-primary-foreground">
       <div className="container mx-auto px-4 md:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
-          <div>
+          <div className="h-full rounded-[2.5rem] border border-primary-foreground/10 bg-background/10 p-6 shadow-soft overflow-hidden">
             <h3 className="font-display text-2xl font-bold mb-4">Urban Brew</h3>
             <p className="font-body text-sm opacity-80 leading-relaxed">
               Crafting exceptional coffee and baked goods since 2018. Your neighborhood café for fresh flavors and warm conversations.
@@ -15,9 +15,9 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="h-full rounded-[2.5rem] border border-primary-foreground/10 bg-background/10 p-6 shadow-soft overflow-hidden">
             <h4 className="font-body text-sm font-semibold uppercase tracking-wider mb-4 opacity-70">Quick Links</h4>
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-3">
               {[
                 { label: "Home", to: "/" },
                 { label: "About Us", to: "/about" },
@@ -32,36 +32,36 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="h-full rounded-[2.5rem] border border-primary-foreground/10 bg-background/10 p-6 shadow-soft overflow-hidden">
             <h4 className="font-body text-sm font-semibold uppercase tracking-wider mb-4 opacity-70">Contact</h4>
-            <div className="flex flex-col gap-3">
-              <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 mt-0.5 opacity-70 shrink-0" />
+            <div className="flex flex-col gap-4">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 opacity-70 shrink-0" />
                 <span className="font-body text-sm opacity-80">123 Brew Street, Downtown District</span>
               </div>
-              <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 opacity-70 shrink-0" />
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 opacity-70 shrink-0" />
                 <a href="tel:+15551234567" className="font-body text-sm opacity-80 hover:opacity-100">+1 (555) 123-4567</a>
               </div>
-              <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 opacity-70 shrink-0" />
+              <div className="flex items-center gap-3">
+                <Mail className="w-5 h-5 opacity-70 shrink-0" />
                 <a href="mailto:hello@urbanbrew.cafe" className="font-body text-sm opacity-80 hover:opacity-100">hello@urbanbrew.cafe</a>
               </div>
             </div>
           </div>
 
           {/* Hours */}
-          <div>
+          <div className="h-full rounded-[2.5rem] border border-primary-foreground/10 bg-background/10 p-6 shadow-soft overflow-hidden">
             <h4 className="font-body text-sm font-semibold uppercase tracking-wider mb-4 opacity-70">Hours</h4>
-            <div className="flex flex-col gap-2.5">
-              <div className="flex items-center gap-2.5">
-                <Clock className="w-4 h-4 opacity-70 shrink-0" />
+            <div className="flex flex-col gap-4">
+              <div className="flex items-start gap-3">
+                <Clock className="w-5 h-5 opacity-70 shrink-0" />
                 <div className="font-body text-sm opacity-80">
                   <p>Mon–Fri: 7:00 AM – 9:00 PM</p>
                   <p>Sat–Sun: 8:00 AM – 10:00 PM</p>
                 </div>
               </div>
-              <div className="flex items-center gap-3 mt-3">
+              <div className="flex items-center gap-4">
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
                   <Instagram className="w-5 h-5" />
                 </a>

@@ -32,7 +32,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-4 md:px-8">
-        <Link to="/" className="font-display text-2xl font-bold text-foreground tracking-tight">
+        <Link to="/" className="font-display text-2xl md:text-3xl font-bold text-foreground tracking-tight">
           Urban Brew
         </Link>
 
@@ -42,7 +42,7 @@ const Navbar = () => {
             <Link
               key={link.to}
               to={link.to}
-              className={`font-body text-sm font-medium transition-colors hover:text-primary ${
+              className={`font-body text-base font-medium transition-colors hover:text-primary ${
                 location.pathname === link.to ? "text-primary" : "text-muted-foreground"
               }`}
             >
